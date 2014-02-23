@@ -1,0 +1,27 @@
+diff --git a/test/src/abstraction_thread_start.c b/test/src/abstraction_thread_start.c
+index 09b58c2..a2ef317 100644
+--- a/test/src/abstraction_thread_start.c
++++ b/test/src/abstraction_thread_start.c
+@@ -113,8 +113,10 @@
+     pthread_attr_t
+       attr;
+ 
++#if !defined(ANDROID) 
+     cpu_set_t
+       cpuset;
++#endif
+ 
+     assert( thread_state != NULL );
+     // TRD : cpu can be any value in its range
+@@ -123,9 +125,11 @@
+ 
+     pthread_attr_init( &attr );
+ 
++#if !defined(ANDROID) 
+     CPU_ZERO( &cpuset );
+     CPU_SET( cpu, &cpuset );
+     pthread_attr_setaffinity_np( &attr, sizeof(cpuset), &cpuset );
++#endif
+ 
+     rv_create = pthread_create( thread_state, &attr, thread_function, thread_user_state );
+ 
