@@ -15,10 +15,10 @@ rm -rf ./obj
 rm -rf ./libs
 
 # make symbolic links
-ln -fs ../../liblfds6.1.1/test/src ./jni/src
-ln -fs ../../liblfds6.1.1/liblfds611/inc ./jni/inc
+ln -fs ../../liblfds7.0.0/test/src ./jni/src
+ln -fs ../../liblfds7.0.0/liblfds700/inc ./jni/inc
 
-# apply patch
+apply patch
 cd ./jni
 patch -N -p2 < ../mods_for_android.patch
 cd ../

@@ -43,7 +43,7 @@ See the following stackoverflow's thread;
 Remarks
 ---
 
-- MIPS architecture is not supported (original liblfds doesn't support them)
+- MIPS64 and ARM64 architectures are not supported (original liblfds doesn't support them)
 - Current test code is NOT IMPLEMENTED PROPERLY, because Andorid doesn't support pthread_attr_setaffinity_np() function.
 
 License

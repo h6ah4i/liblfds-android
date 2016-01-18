@@ -1,3 +1,3 @@
-[submodule "liblfds6.1.1"]
-	path = liblfds6.1.1
-	url = https://github.com/liblfds/liblfds6.1.1.git
+[submodule "liblfds7.0.0"]
+	path = liblfds7.0.0
+	url = https://github.com/liblfds/liblfds7.0.0
